@@ -4,32 +4,31 @@
 
 #include <iostream>
 #include "Kitchen.h"
-using namespace std;
 
 void AlphaMenu(int userOption) {
 	switch (userOption) {
 	case 1:
-		cout << "Input 0 to quit.\n";
-		cout << "Input 1 to enter data into the program.\n";
-		cout << "Input 2 to check data in the program.\n";
-		cout << "Please enter an integer:\n";
-		cout << endl;
+		std::cout << "Input 0 to quit.\n";
+		std::cout << "Input 1 to enter data into the program.\n";
+		std::cout << "Input 2 to check data in the program.\n";
+		std::cout << "Please enter an integer:\n";
+		std::cout << std::endl;
 		break;
 	case 2:
-		cout << "You want to enter data.\n";
-		cout << "Input 1 to enter the amount of things cooking.\n";
-		cout << "Input 2 to enter the number of cooks working.\n";
-		cout << "Input 3 to enter oven settings.\n";
-		cout << endl;
+		std::cout << "You want to enter data.\n";
+		std::cout << "Input 1 to enter the amount of things cooking.\n";
+		std::cout << "Input 2 to enter the number of cooks working.\n";
+		std::cout << "Input 3 to enter oven settings.\n";
+		std::cout << std::endl;
 		break;
 	case 3:
-		cout << "You want to check the status.\n";
-		cout << "Input 0 to quit.\n";
-		cout << "Input 1 to check how many things are cooking.\n";
-		cout << "Input 2 to check how many cooks are working.\n";
-		cout << "Input 3 to check the oven's status.\n";
-		cout << "Input 4 to check the safety status.\n";
-		cout << endl;
+		std::cout << "You want to check the status.\n";
+		std::cout << "Input 0 to quit.\n";
+		std::cout << "Input 1 to check how many things are cooking.\n";
+		std::cout << "Input 2 to check how many cooks are working.\n";
+		std::cout << "Input 3 to check the oven's status.\n";
+		std::cout << "Input 4 to check the safety status.\n";
+		std::cout << std::endl;
 		break;
 	default:
 		break;
@@ -37,12 +36,12 @@ void AlphaMenu(int userOption) {
 }
 
 int main() {
-	string userString = "";
+	std::string userString = "";
 	Kitchen userKitchen;
 
 	while (userString != "0") {
 		AlphaMenu(1);
-		cin >> userString;
+		std::cin >> userString;
 
 		if (userString == "0") {
 			break;
@@ -50,7 +49,7 @@ int main() {
 		else if (userString == "1") {
 			userString = "";
 			AlphaMenu(2);
-			cin >> userString;
+			std::cin >> userString;
 
 			if (userString == "1") {
 				userKitchen.SetNumCooking();
@@ -66,7 +65,7 @@ int main() {
 		else if (userString == "2") {
 			userString = "";
 			AlphaMenu(3);
-			cin >> userString;
+			std::cin >> userString;
 
 			if (userString == "1") {
 				userKitchen.GetNumCooking();
@@ -81,10 +80,10 @@ int main() {
 			else if (userString == "4") {
                 userKitchen.SafetyCheck();
 			}
-			cout << endl;
+			std::cout << std::endl;
 		}
 
-		cout << endl;
+		std::cout << std::endl;
 	}
 
 	return 0;

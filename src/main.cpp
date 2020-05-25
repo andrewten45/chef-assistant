@@ -1,4 +1,4 @@
-// Kitchen helper by Andrew T
+// Chef assistant by Andrew T
 // This program is designed to help cooks in the kitchen.
 // TODO: Add recipes, ingredients, and feature to match ingredients with recipes.
 
@@ -36,7 +36,7 @@ void AlphaMenu(int userOption) {
 	}
 }
 
-void primaryFunction() {
+int main() {
 	string userString = "";
 	Kitchen userKitchen;
 
@@ -86,9 +86,6 @@ void primaryFunction() {
 
 		cout << endl;
 	}
-}
 
-int main() {
-	primaryFunction();
 	return 0;
 }

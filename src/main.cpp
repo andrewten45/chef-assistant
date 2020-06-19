@@ -1,6 +1,7 @@
 // Chef assistant by Andrew T
 // This program is designed to help cooks in the kitchen.
 // TODO: Add recipes, ingredients, and feature to match ingredients with recipes.
+// TODO: Add orders, which specify which things need to be cooked to serve customers.
 
 #include <iostream>
 #include "Kitchen.h"

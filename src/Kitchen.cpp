@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Kitchen.h"
 
+
 void Kitchen::GetNumCooking() {
 	if (cooking == 0) {
 		std::cout << "Nothing's cooking.\n";
@@ -141,4 +142,20 @@ void Kitchen::SafetyCheck() {
             std::cout << "FIRE HAZARD: Oven is on without cooks working.\n";
         }
     }
+}
+void Kitchen::SetListIngreds() {
+    //Push back ingredient
+    //Set quantity of ingredient
+    //Delete specific ingredient
+}
+void Kitchen::GetListIngreds() {
+    //Get list of ingredients in the vector along with quantity
+    //Get list of ingredients & amount as it pertains to a recipe (future implementation)
+}
+void Kitchen::SetListOrders() {
+    //Add an order to the list; record time it was added
+    //Delete an order from the list
+}
+void Kitchen::GetListOrders() {
+    //Get list of orders & time ordered
 }

@@ -147,6 +147,7 @@ void Kitchen::SetListIngreds() {
     //Push back ingredient
     //Set quantity of ingredient
     //Delete specific ingredient
+    //Pop back ingredient
 }
 void Kitchen::GetListIngreds() {
     //Get list of ingredients in the vector along with quantity
@@ -154,7 +155,7 @@ void Kitchen::GetListIngreds() {
 }
 void Kitchen::SetListOrders() {
     //Add an order to the list; record time it was added
-    //Delete an order from the list
+    //Delete an order from the list when completed
 }
 void Kitchen::GetListOrders() {
     //Get list of orders & time ordered

@@ -144,8 +144,15 @@ void Kitchen::SafetyCheck() {
     }
 }
 void Kitchen::SetListIngreds() {
+    string userIn;
+    int ingredQuantity;
+
     //Push back ingredient
+    std::vector.push_back(userIn);
+
     //Set quantity of ingredient
+    cin >> ingredQuantity; //?
+
     //Delete specific ingredient
     //Pop back ingredient
 }

@@ -151,10 +151,12 @@ void Kitchen::SetListIngreds() {
     std::vector.push_back(userIn);
 
     //Set quantity of ingredient
-    cin >> ingredQuantity; //?
+    std::cin >> ingredQuantity; //?
+
 
     //Delete specific ingredient
     //Pop back ingredient
+    std::vector.pop_back(userIn);
 }
 void Kitchen::GetListIngreds() {
     //Get list of ingredients in the vector along with quantity

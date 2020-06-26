@@ -144,8 +144,11 @@ void Kitchen::SafetyCheck() {
     }
 }
 void Kitchen::SetListIngreds() {
+    string userChoice;
     string userIn;
     int ingredQuantity;
+
+    std::cout << "Choice: 1, 2, 3\n";
 
     //Push back ingredient
     std::vector.push_back(userIn);
@@ -156,7 +159,9 @@ void Kitchen::SetListIngreds() {
 
     //Delete specific ingredient
     //Pop back ingredient
-    std::vector.pop_back(userIn);
+    if (userChoice == "3") {
+        std::vector.pop_back(userIn);
+    }
 }
 void Kitchen::GetListIngreds() {
     //Get list of ingredients in the vector along with quantity

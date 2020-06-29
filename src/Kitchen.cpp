@@ -148,19 +148,28 @@ void Kitchen::SetListIngreds() {
     string userIn;
     int ingredQuantity;
 
-    std::cout << "Choice: 1, 2, 3\n";
+    std::cout << "Choice: 0, 1, 2, 3\n";
+    std::cout << "0: Go back\n";
+    std::cout << "1: Add ingredient\n";
+    std::cout << "2: Set quantity of ingredient\n";
+    std::cout << "3: Delete ingredient\n";
 
-    //Push back ingredient
-    std::vector.push_back(userIn);
-
-    //Set quantity of ingredient
-    std::cin >> ingredQuantity; //?
-
-
-    //Delete specific ingredient
-    //Pop back ingredient
-    if (userChoice == "3") {
-        std::vector.pop_back(userIn);
+    while(userChoice != "0") {
+        if (userChoice == 1) {
+            //Push back ingredient
+            std::vector.push_back(userIn);
+        }
+        else if (userChoice == 2) {
+            //Set quantity of ingredient
+            std::cin >> ingredQuantity; //?
+        }
+        else if (userChoice == 3) {
+            //Delete specific ingredient
+            //Pop back ingredient
+            if (userChoice == "3") {
+                std::vector.pop_back(userIn);
+            }
+        }
     }
 }
 void Kitchen::GetListIngreds() {

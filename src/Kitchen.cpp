@@ -144,8 +144,8 @@ void Kitchen::SafetyCheck() {
     }
 }
 void Kitchen::SetListIngreds() {
-    string userChoice;
-    string userIn;
+    std::string userChoice;
+    std::string userIn;
     int ingredQuantity;
 
     std::cout << "Choice: 0, 1, 2, 3\n";
@@ -154,20 +154,22 @@ void Kitchen::SetListIngreds() {
     std::cout << "2: Set quantity of ingredient\n";
     std::cout << "3: Delete ingredient\n";
 
+    std::cin >> userChoice;
+
     while(userChoice != "0") {
-        if (userChoice == 1) {
+        if (userChoice == "1") {
             //Push back ingredient
-            std::vector.push_back(userIn);
+            listIngreds.push_back(userIn);
         }
-        else if (userChoice == 2) {
+        else if (userChoice == "2") {
             //Set quantity of ingredient
             std::cin >> ingredQuantity; //?
         }
-        else if (userChoice == 3) {
+        else if (userChoice == "3") {
             //Delete specific ingredient
             //Pop back ingredient
             if (userChoice == "3") {
-                std::vector.pop_back(userIn);
+                listIngreds.pop_back(userIn);
             }
         }
     }

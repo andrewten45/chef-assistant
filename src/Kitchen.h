@@ -23,6 +23,8 @@ private:
 	int cooks = 0;
 	int status = 0;
 	int ovenTemp = 0;
+	int numCooks = 0;
+	int ovenHeat = 0;
 	std::vector<std::string> listIngreds;
 	std::vector<std::string> listOrders;
 };

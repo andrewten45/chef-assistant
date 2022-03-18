@@ -27,6 +27,8 @@ void Kitchen::GetNumCooks() {
 }
 
 void Kitchen::GetOvenStatus() {
+    enum ovenStatus {OVEN_ON, OVEN_BAKE, OVEN_BROIL};
+
 	if (status == 0) {
 		std::cout << "Oven is off.\n";
 	}
@@ -48,7 +50,7 @@ void Kitchen::GetOvenTemp() {
 }
 
 void Kitchen::SetNumCooking() {
-	int numCooking;
+    int numCooking = 0;
 	std::cout << "Please enter the number of items cooking:\n";
 	std::cin >> numCooking;
 
@@ -66,7 +68,6 @@ void Kitchen::SetNumCooking() {
 }
 
 void Kitchen::SetNumCooks() {
-	int numCooks;
 	std::cout << "Please enter the number of cooks working:\n";
 	std::cin >> numCooks;
 
@@ -107,8 +108,6 @@ void Kitchen::SetOvenStatus() {
 	status = ovenStatus;
 }
 void Kitchen::SetOvenTemp() {
-	int ovenHeat;
-
 	std::cout << "What temperature (F)?\n";
 	std::cin >> ovenHeat;
 
@@ -159,6 +158,7 @@ void Kitchen::SetListIngreds() {
     while(userChoice != "0") {
         if (userChoice == "1") {
             //Push back ingredient
+            std::cin >> userIn;
             listIngreds.push_back(userIn);
         }
         else if (userChoice == "2") {
@@ -169,7 +169,7 @@ void Kitchen::SetListIngreds() {
             //Delete specific ingredient
             //Pop back ingredient
             if (userChoice == "3") {
-                listIngreds.pop_back(userIn);
+                //listIngreds.pop_back(userIn);
             }
         }
     }

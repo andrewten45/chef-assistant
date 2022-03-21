@@ -16,14 +16,15 @@ void AlphaMenu(int userOption) {
 		std::cout << std::endl;
 		break;
 	case 2:
-		std::cout << "You want to enter data.\n";
+		std::cout << "Data entry menu.\n";
 		std::cout << "Input 1 to enter the amount of things cooking.\n";
 		std::cout << "Input 2 to enter the number of cooks working.\n";
 		std::cout << "Input 3 to enter oven settings.\n";
+		std::cout << "4: Set list of ingredients"
 		std::cout << std::endl;
 		break;
 	case 3:
-		std::cout << "You want to check the status.\n";
+		std::cout << "Data gathering menu.\n";
 		std::cout << "Input 0 to quit.\n";
 		std::cout << "Input 1 to check how many things are cooking.\n";
 		std::cout << "Input 2 to check how many cooks are working.\n";
@@ -62,6 +63,9 @@ int main() {
 				userKitchen.SetOvenStatus();
 				userKitchen.SetOvenTemp();
 			}
+			else if (userString == "4") {
+                userKitchen.SetListIngreds();
+			}
 		}
 		else if (userString == "2") {
 			userString = "";
@@ -80,6 +84,9 @@ int main() {
 			}
 			else if (userString == "4") {
                 userKitchen.SafetyCheck();
+			}
+			else if (userString == "5") {
+                //N/A
 			}
 			std::cout << std::endl;
 		}

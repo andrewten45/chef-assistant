@@ -1,7 +1,9 @@
 #include <iostream>
 #include "Kitchen.h"
 
-
+//--------------
+// GET FUNCTIONS
+//--------------
 void Kitchen::GetNumCooking() {
 	if (cooking == 0) {
 		std::cout << "Nothing's cooking.\n";
@@ -49,6 +51,10 @@ void Kitchen::GetOvenTemp() {
 	}
 }
 
+
+//--------------
+// SET FUNCTIONS
+//--------------
 void Kitchen::SetNumCooking() {
     char numCooking = 0;
 	std::cout << "Please enter the number of items cooking:\n";

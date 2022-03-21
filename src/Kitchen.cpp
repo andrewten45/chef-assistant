@@ -50,14 +50,15 @@ void Kitchen::GetOvenTemp() {
 }
 
 void Kitchen::SetNumCooking() {
-    int numCooking = 0;
+    char numCooking = 0;
 	std::cout << "Please enter the number of items cooking:\n";
 	std::cin >> numCooking;
 
-	if (numCooking == 0) {
+	// Rule: Things cooking cannot exceed 9, or else it behaves strangely.
+	if (numCooking == '0') {
 		std::cout << "Nothing's cooking.\n";
 	}
-	else if (numCooking == 1) {
+	else if (numCooking == '1') {
 		std::cout << "There's " << numCooking << " thing cooking.\n";
 	}
 	else {
